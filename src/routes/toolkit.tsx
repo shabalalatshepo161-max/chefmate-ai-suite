@@ -201,12 +201,12 @@ function CostTool() {
     <ToolShell title="Cost inputs" busy={t.busy} run={t.run} output={t.output} setOutput={t.setOutput}
       form={<div className="grid grid-cols-2 gap-3">
         <Field label="Guests"><Input type="number" value={t.state.guestCount} onChange={(e) => t.setState({ ...t.state, guestCount: +e.target.value || 0 })} /></Field>
-        <Field label="Food $/guest"><Input type="number" value={t.state.foodPerGuest} onChange={(e) => t.setState({ ...t.state, foodPerGuest: +e.target.value || 0 })} /></Field>
+        <Field label="Food R/guest"><Input type="number" value={t.state.foodPerGuest} onChange={(e) => t.setState({ ...t.state, foodPerGuest: +e.target.value || 0 })} /></Field>
         <Field label="Staff count"><Input type="number" value={t.state.staffCount} onChange={(e) => t.setState({ ...t.state, staffCount: +e.target.value || 0 })} /></Field>
         <Field label="Staff hours"><Input type="number" value={t.state.staffHours} onChange={(e) => t.setState({ ...t.state, staffHours: +e.target.value || 0 })} /></Field>
-        <Field label="Staff rate $/hr"><Input type="number" value={t.state.staffRate} onChange={(e) => t.setState({ ...t.state, staffRate: +e.target.value || 0 })} /></Field>
-        <Field label="Equipment $"><Input type="number" value={t.state.equipment} onChange={(e) => t.setState({ ...t.state, equipment: +e.target.value || 0 })} /></Field>
-        <Field label="Transport $"><Input type="number" value={t.state.transport} onChange={(e) => t.setState({ ...t.state, transport: +e.target.value || 0 })} /></Field>
+        <Field label="Staff rate R/hr"><Input type="number" value={t.state.staffRate} onChange={(e) => t.setState({ ...t.state, staffRate: +e.target.value || 0 })} /></Field>
+        <Field label="Equipment (R)"><Input type="number" value={t.state.equipment} onChange={(e) => t.setState({ ...t.state, equipment: +e.target.value || 0 })} /></Field>
+        <Field label="Transport (R)"><Input type="number" value={t.state.transport} onChange={(e) => t.setState({ ...t.state, transport: +e.target.value || 0 })} /></Field>
         <Field label="Margin %"><Input type="number" value={t.state.margin} onChange={(e) => t.setState({ ...t.state, margin: +e.target.value || 0 })} /></Field>
       </div>} />
   );
