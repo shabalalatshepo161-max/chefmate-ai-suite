@@ -81,9 +81,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "AI-powered proposals, emails, event planning, and research for catering, hospitality, and event professionals. No signup required." },
       { name: "author", content: "ChefMate AI" },
       { property: "og:title", content: "ChefMate AI — AI Productivity for Catering & Hospitality" },
-      { property: "og:description", content: "AI-powered proposals, emails, event planning, and research for catering and hospitality pros. No signup." },
+      { property: "og:description", content: "AI-powered proposals, emails, event planning, and research for catering, hospitality, and event professionals. No signup required." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "ChefMate AI — AI Productivity for Catering & Hospitality" },
+      { name: "twitter:description", content: "AI-powered proposals, emails, event planning, and research for catering, hospitality, and event professionals. No signup required." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/T37j6CvDbWWZJlyr3n44krOuhah1/social-images/social-1783633952562-ChefMate_AI-logo_Minimalist_Circuit_Hat.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/T37j6CvDbWWZJlyr3n44krOuhah1/social-images/social-1783633952562-ChefMate_AI-logo_Minimalist_Circuit_Hat.webp" },
     ],
     links: [
       {
