@@ -27,6 +27,7 @@ import {
   SidebarTrigger,
   SidebarInset,
 } from "@/components/ui/sidebar";
+import { Toaster } from "@/components/ui/sonner";
 
 const nav = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
@@ -123,6 +124,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           </footer>
         </SidebarInset>
       </div>
+      <Toaster position="top-right" richColors />
     </SidebarProvider>
   );
 }
