@@ -85,7 +85,7 @@ function ProposalsPage() {
                 </Field>
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <Field label="Budget (USD)">
+                <Field label="Budget (ZAR)">
                   <Input type="number" value={form.budget} onChange={(e) => set("budget", parseInt(e.target.value) || 0)} />
                 </Field>
                 <Field label="Event date">
