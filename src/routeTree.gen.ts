@@ -9,8 +9,56 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ToolkitRouteImport } from './routes/toolkit'
+import { Route as ResponsibleAiRouteImport } from './routes/responsible-ai'
+import { Route as ResearchRouteImport } from './routes/research'
+import { Route as ProposalsRouteImport } from './routes/proposals'
+import { Route as PromptsRouteImport } from './routes/prompts'
+import { Route as PlannerRouteImport } from './routes/planner'
+import { Route as HelpRouteImport } from './routes/help'
+import { Route as EmailsRouteImport } from './routes/emails'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ToolkitRoute = ToolkitRouteImport.update({
+  id: '/toolkit',
+  path: '/toolkit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResponsibleAiRoute = ResponsibleAiRouteImport.update({
+  id: '/responsible-ai',
+  path: '/responsible-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProposalsRoute = ProposalsRouteImport.update({
+  id: '/proposals',
+  path: '/proposals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PromptsRoute = PromptsRouteImport.update({
+  id: '/prompts',
+  path: '/prompts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlannerRoute = PlannerRouteImport.update({
+  id: '/planner',
+  path: '/planner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmailsRoute = EmailsRouteImport.update({
+  id: '/emails',
+  path: '/emails',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +67,144 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/emails': typeof EmailsRoute
+  '/help': typeof HelpRoute
+  '/planner': typeof PlannerRoute
+  '/prompts': typeof PromptsRoute
+  '/proposals': typeof ProposalsRoute
+  '/research': typeof ResearchRoute
+  '/responsible-ai': typeof ResponsibleAiRoute
+  '/toolkit': typeof ToolkitRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/emails': typeof EmailsRoute
+  '/help': typeof HelpRoute
+  '/planner': typeof PlannerRoute
+  '/prompts': typeof PromptsRoute
+  '/proposals': typeof ProposalsRoute
+  '/research': typeof ResearchRoute
+  '/responsible-ai': typeof ResponsibleAiRoute
+  '/toolkit': typeof ToolkitRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/emails': typeof EmailsRoute
+  '/help': typeof HelpRoute
+  '/planner': typeof PlannerRoute
+  '/prompts': typeof PromptsRoute
+  '/proposals': typeof ProposalsRoute
+  '/research': typeof ResearchRoute
+  '/responsible-ai': typeof ResponsibleAiRoute
+  '/toolkit': typeof ToolkitRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/emails'
+    | '/help'
+    | '/planner'
+    | '/prompts'
+    | '/proposals'
+    | '/research'
+    | '/responsible-ai'
+    | '/toolkit'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/emails'
+    | '/help'
+    | '/planner'
+    | '/prompts'
+    | '/proposals'
+    | '/research'
+    | '/responsible-ai'
+    | '/toolkit'
+  id:
+    | '__root__'
+    | '/'
+    | '/emails'
+    | '/help'
+    | '/planner'
+    | '/prompts'
+    | '/proposals'
+    | '/research'
+    | '/responsible-ai'
+    | '/toolkit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EmailsRoute: typeof EmailsRoute
+  HelpRoute: typeof HelpRoute
+  PlannerRoute: typeof PlannerRoute
+  PromptsRoute: typeof PromptsRoute
+  ProposalsRoute: typeof ProposalsRoute
+  ResearchRoute: typeof ResearchRoute
+  ResponsibleAiRoute: typeof ResponsibleAiRoute
+  ToolkitRoute: typeof ToolkitRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/toolkit': {
+      id: '/toolkit'
+      path: '/toolkit'
+      fullPath: '/toolkit'
+      preLoaderRoute: typeof ToolkitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/responsible-ai': {
+      id: '/responsible-ai'
+      path: '/responsible-ai'
+      fullPath: '/responsible-ai'
+      preLoaderRoute: typeof ResponsibleAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/proposals': {
+      id: '/proposals'
+      path: '/proposals'
+      fullPath: '/proposals'
+      preLoaderRoute: typeof ProposalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prompts': {
+      id: '/prompts'
+      path: '/prompts'
+      fullPath: '/prompts'
+      preLoaderRoute: typeof PromptsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/planner': {
+      id: '/planner'
+      path: '/planner'
+      fullPath: '/planner'
+      preLoaderRoute: typeof PlannerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/emails': {
+      id: '/emails'
+      path: '/emails'
+      fullPath: '/emails'
+      preLoaderRoute: typeof EmailsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +217,15 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EmailsRoute: EmailsRoute,
+  HelpRoute: HelpRoute,
+  PlannerRoute: PlannerRoute,
+  PromptsRoute: PromptsRoute,
+  ProposalsRoute: ProposalsRoute,
+  ResearchRoute: ResearchRoute,
+  ResponsibleAiRoute: ResponsibleAiRoute,
+  ToolkitRoute: ToolkitRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
