@@ -24,7 +24,9 @@ export const Route = createFileRoute("/toolkit")({
       { name: "description", content: "Meeting summaries, planners, SOPs, recipe scaling, cost estimator and more — all AI-assisted." },
       { property: "og:title", content: "Productivity Toolkit — ChefMate AI" },
       { property: "og:description", content: "9 quick AI tools for hospitality operations." },
+      { property: "og:url", content: "https://chefmate-ai-express.lovable.app/toolkit" },
     ],
+    links: [{ rel: "canonical", href: "https://chefmate-ai-express.lovable.app/toolkit" }],
   }),
   component: ToolkitPage,
 });

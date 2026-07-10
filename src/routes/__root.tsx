@@ -83,6 +83,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "ChefMate AI — AI Productivity for Catering & Hospitality" },
       { property: "og:description", content: "AI-powered proposals, emails, event planning, and research for catering, hospitality, and event professionals. No signup required." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://chefmate-ai-express.lovable.app/" },
+      { property: "og:site_name", content: "ChefMate AI" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "ChefMate AI — AI Productivity for Catering & Hospitality" },
       { name: "twitter:description", content: "AI-powered proposals, emails, event planning, and research for catering, hospitality, and event professionals. No signup required." },

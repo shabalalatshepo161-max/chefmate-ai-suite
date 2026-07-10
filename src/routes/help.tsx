@@ -10,7 +10,9 @@ export const Route = createFileRoute("/help")({
       { name: "description", content: "How to use ChefMate AI — no-login AI productivity for catering and hospitality." },
       { property: "og:title", content: "Help & FAQ — ChefMate AI" },
       { property: "og:description", content: "Quickstart, tips, and answers for ChefMate AI." },
+      { property: "og:url", content: "https://chefmate-ai-express.lovable.app/help" },
     ],
+    links: [{ rel: "canonical", href: "https://chefmate-ai-express.lovable.app/help" }],
   }),
   component: HelpPage,
 });

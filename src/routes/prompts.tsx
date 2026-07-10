@@ -15,7 +15,9 @@ export const Route = createFileRoute("/prompts")({
       { name: "description", content: "Ready-to-use AI prompts for catering, hospitality, marketing, ops and management." },
       { property: "og:title", content: "AI Prompt Library — ChefMate AI" },
       { property: "og:description", content: "20+ reusable prompts across every hospitality workflow." },
+      { property: "og:url", content: "https://chefmate-ai-express.lovable.app/prompts" },
     ],
+    links: [{ rel: "canonical", href: "https://chefmate-ai-express.lovable.app/prompts" }],
   }),
   component: PromptsPage,
 });

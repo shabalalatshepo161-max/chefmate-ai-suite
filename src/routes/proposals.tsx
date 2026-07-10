@@ -20,7 +20,9 @@ export const Route = createFileRoute("/proposals")({
       { name: "description", content: "Generate full catering proposals with cover email, tiered menus, pricing, timeline, and terms." },
       { property: "og:title", content: "Smart Proposal Generator — ChefMate AI" },
       { property: "og:description", content: "Full catering proposals in seconds. No login required." },
+      { property: "og:url", content: "https://chefmate-ai-express.lovable.app/proposals" },
     ],
+    links: [{ rel: "canonical", href: "https://chefmate-ai-express.lovable.app/proposals" }],
   }),
   component: ProposalsPage,
 });
