@@ -20,7 +20,9 @@ export const Route = createFileRoute("/emails")({
       { name: "description", content: "AI email drafts in 8 tones — quotations, confirmations, follow-ups, thank-yous and more." },
       { property: "og:title", content: "Smart Email Generator — ChefMate AI" },
       { property: "og:description", content: "Draft professional hospitality emails in seconds." },
+      { property: "og:url", content: "https://chefmate-ai-express.lovable.app/emails" },
     ],
+    links: [{ rel: "canonical", href: "https://chefmate-ai-express.lovable.app/emails" }],
   }),
   component: EmailsPage,
 });

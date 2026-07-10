@@ -10,7 +10,9 @@ export const Route = createFileRoute("/responsible-ai")({
       { name: "description", content: "How ChefMate AI is designed for safe, responsible use in catering and hospitality." },
       { property: "og:title", content: "Responsible AI — ChefMate AI" },
       { property: "og:description", content: "Our approach to responsible AI use in hospitality." },
+      { property: "og:url", content: "https://chefmate-ai-express.lovable.app/responsible-ai" },
     ],
+    links: [{ rel: "canonical", href: "https://chefmate-ai-express.lovable.app/responsible-ai" }],
   }),
   component: RaiPage,
 });

@@ -18,7 +18,9 @@ export const Route = createFileRoute("/research")({
       { name: "description", content: "Hospitality-specific research: food trends, vendors, pricing, sustainability, and more." },
       { property: "og:title", content: "AI Research Assistant — ChefMate AI" },
       { property: "og:description", content: "Summarised research briefs for catering & hospitality." },
+      { property: "og:url", content: "https://chefmate-ai-express.lovable.app/research" },
     ],
+    links: [{ rel: "canonical", href: "https://chefmate-ai-express.lovable.app/research" }],
   }),
   component: ResearchPage,
 });

@@ -19,7 +19,9 @@ export const Route = createFileRoute("/planner")({
       { name: "description", content: "Generate catering event timelines, staff assignments, shopping and service checklists." },
       { property: "og:title", content: "AI Event Task Planner — ChefMate AI" },
       { property: "og:description", content: "Prep timelines, checklists, and staff assignments for any event." },
+      { property: "og:url", content: "https://chefmate-ai-express.lovable.app/planner" },
     ],
+    links: [{ rel: "canonical", href: "https://chefmate-ai-express.lovable.app/planner" }],
   }),
   component: PlannerPage,
 });

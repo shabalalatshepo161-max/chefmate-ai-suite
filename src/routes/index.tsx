@@ -9,6 +9,12 @@ import { getRecent, type RecentOutput } from "@/lib/recent-outputs";
 
 export const Route = createFileRoute("/")({
   component: Dashboard,
+  head: () => ({
+    meta: [
+      { property: "og:url", content: "https://chefmate-ai-express.lovable.app/" },
+    ],
+    links: [{ rel: "canonical", href: "https://chefmate-ai-express.lovable.app/" }],
+  }),
 });
 
 const features = [
